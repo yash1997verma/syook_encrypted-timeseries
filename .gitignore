@@ -1,0 +1,6 @@
+#Front end
+/client/node_modules/
+
+# back end
+/api/.env
+/api/node_modules/
