@@ -5,6 +5,9 @@ const data = require('./data.json');
 const socketIO = require('socket.io');
 const cors = require('cors');
 
+//setting up db
+const db = require('./config/mongoose');
+
 //import emitter and listner
 const emitter = require('./services/emitter')
 const listener = require('./services/listener')
