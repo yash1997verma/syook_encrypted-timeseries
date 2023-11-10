@@ -35,7 +35,7 @@ const randomMessage = ()=>{
 const deleteAllOldData = async () => {
     try {
       await DataModel.deleteMany({});
-      console.log('All old data deleted successfully.');
+    //   console.log('All old data deleted successfully.');
     } catch (error) {
       console.error('Error deleting old data:', error);
     }

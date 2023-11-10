@@ -15,6 +15,7 @@ function App() {
 
     //get the validated data from backend
     socket.on('broadcastFetchedData', (data)=>{
+      console.log(data)
       setDataState(data);
     })
 
