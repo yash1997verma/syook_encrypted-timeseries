@@ -19,7 +19,12 @@ const server = http.createServer(app);
 const port = 8000;
 
 //setup socket server using http server
-const io = new socketIO.Server(server)
+const io = new socketIO.Server(server, {
+    cors: {
+        origin: '*',
+        methods: ['GET', 'POST']
+    }
+})
 
 //setup socket.io
 io.on('connection', (socket)=>{
