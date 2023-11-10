@@ -5,8 +5,9 @@ function App() {
   const [dataState, setDataState] = useState([]);
   useEffect(()=>{
     //socket connection with the emitter service
-    const socket  = io('https://timeapi.onrender.com:8000');
-    // console.log(socket)
+    // https://timeapi.onrender.com
+    const socket  = io('http://localhost:8000');
+ 
     socket.on('dataStream', (stream) => {
       // Send the encrypted stream back to the listener service on the backend
       // for decryption, saving to the database, and broadcasting.
@@ -35,7 +36,7 @@ function App() {
             <p>Origin: {data.origin}</p>
             <p>Destination: {data.destination}</p>
             <p>Timestamp: {data.timestamp}</p>
-            Add other properties as needed
+            
           </div>
         );
       })}

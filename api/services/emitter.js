@@ -80,7 +80,6 @@ const encryptedStream = ()=>{
         const messageString = `${message.iv}:${message.encryptedData}`
         messages.push(messageString);
     }
-    // console.log(messages)
 
     // Concatenate the encrypted messages into a single string separated by '|'
     const stream = messages.join('|');

@@ -54,13 +54,11 @@ const setupListener = (socket) => {
 
             // Fetch the data from MongoDB
             const fetchedData = await DataModel.find({});
-            // console.log('Fetched data:', fetchedData);
 
             // Broadcast the fetched data back to the emitter
             socket.emit('broadcastFetchedData', fetchedData);
         } catch (error) {
             console.error('Error processing encrypted stream:', error);
-            // Handle or log the error appropriately
         }
     });
 };
