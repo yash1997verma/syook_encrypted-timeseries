@@ -16,7 +16,7 @@ const listener = require('./services/listener')
 // http server
 const app = express();
 const server = http.createServer(app);
-const port = 8000;
+const port = 80;
 
 //setup socket server using http server
 const io = new socketIO.Server(server, {
